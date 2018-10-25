@@ -49,7 +49,7 @@ return response()->json($select);
             $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
             $fileExtension = $file->getClientOriginalExtension();
             $fileNameToStore = $fileName . '_' . time() . '.' . $fileExtension;
-            $request->file('img')->storeAs('public/avatars', $fileNameToStore);
+            $request->file('img')->storeAs('public/images', $fileNameToStore);
             return $fileNameToStore;
         }
         //  else {

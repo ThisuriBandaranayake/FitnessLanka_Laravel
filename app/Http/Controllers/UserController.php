@@ -23,7 +23,7 @@ class UserController extends Controller
      * @var array
      */
     private $adminValidate = [
-        'name' => 'required|unique:users|min:6|max:32',
+        'name' => 'required|unique:users|min:4|max:32',
         'email' => 'required|unique:users|email',
         'avatar' => 'image|max:1999',
         'user_type' => 'required|in:admin,customer,institute',
@@ -31,7 +31,7 @@ class UserController extends Controller
         'confirm_password' => 'same:password'
     ];
     private $customerValidate = [
-        'name' => 'required|unique:users|min:6|max:32',
+        'name' => 'required|unique:users|min:4|max:32',
         'email' => 'required|unique:users|email',
         'avatar' => 'image|max:1999',
         'user_type' => 'required|in:admin,customer,institute',
@@ -44,7 +44,7 @@ class UserController extends Controller
         'gender' => 'required|in:male,female'
     ];
     private $instituteValidate = [
-       'name' => 'required|unique:users|min:6|max:32',
+       'name' => 'required|unique:users|min:4|max:32',
         'email' => 'required|unique:users|email',
         'avatar' => 'image|max:1999',
         'user_type' => 'required|in:admin,customer,institute',
